@@ -1,0 +1,16 @@
+
+
+helm template -f email-service-values.yaml ../charts/microservices
+
+helm lint -f email-service-values.yaml ../charts/microservices
+
+
+helm install <values-file.yaml> <release-name> <chart-name>
+
+helm install email-service-values.yaml emailservice ../charts/microservices
+
+helm install --dry-run -f values/redis-values.yaml redisCart charts/redis
+
+helmfile sync
+helmfile 
+helmfile destroy
